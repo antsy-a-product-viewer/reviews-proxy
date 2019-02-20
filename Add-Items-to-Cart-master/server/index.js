@@ -8,8 +8,15 @@ const store = require('../database/seed.js');
 
 // app.use(express.static(`${__dirname}/../client/dist`)); // root directory to serve the static files (dist in client folder, where our bundle is)
 
-app.use('/product/:productId', express.static(`${__dirname}/../client/dist`))
+app.use('/product/:productId', express.static(`${__dirname}/../client/dist`));
 app.use(bodyParser.json());
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 app.get('/product/:productId/item', (req, res) => {
   let item = req.params.productId;
