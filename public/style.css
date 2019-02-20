@@ -5,4 +5,32 @@
 
 .header-piece {
   align-self: center;
+  color: orange;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#description {
+  margin-top: 75px;
+}
+
+#summary {
+  width: 400px;
+}
+
+#payment {
+  width: 600px;
+}
+
+#related-items {
+  width: 1000px;
+  margin-left: 200px;
+}
+
+#footer {
+  width: 1000px;
+  margin-left: 200px;
 }
