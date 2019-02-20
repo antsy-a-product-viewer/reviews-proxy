@@ -6,6 +6,14 @@ const port = 3020;
 
 app.use('/product/:productId', express.static(path.join(__dirname, '/../client/dist')));
 
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 app.get('/product/:productId/store_id', (req, res) => {
   var productId = req.params.productId;
   db.getStoreFromItem(productId, (err, data) => {

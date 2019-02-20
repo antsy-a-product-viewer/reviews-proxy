@@ -52,7 +52,8 @@ class Container extends React.Component {
   }
 
   getData() {
-    var endpoint = window.location.pathname + 'store_id';
+    // var endpoint = window.location.pathname + 'store_id';
+    var endpoint = 'http://localhost:3020' + window.location.pathname + 'store_id';
     axios.get(endpoint)
       .then((res) => {
         var storeId = res.data[0].store_id;
@@ -68,7 +69,7 @@ class Container extends React.Component {
   }
 
   getReviews(storeId) {
-    axios.get(`/stores/${storeId}/reviews`)
+    axios.get(`http://localhost:3020/stores/${storeId}/reviews`)
       .then((res) => {
         this.getAverageStars(res.data);
         this.setState({
@@ -81,7 +82,7 @@ class Container extends React.Component {
   }
 
   getReviewImages(storeId) {
-    axios.get(`/stores/${storeId}/review_images`)
+    axios.get(`http://localhost:3020/stores/${storeId}/review_images`)
       .then((res) => {
         this.setState({
           reviewImages: res.data
