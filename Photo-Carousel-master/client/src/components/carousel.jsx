@@ -89,7 +89,7 @@ class Carousel extends React.Component {
   //******************** STATE ********************
 
   retrieveImageDocument() {
-    let endpoint = window.location.pathname + 'retrieve';
+    let endpoint = 'http://localhost:3010' + window.location.pathname + 'images/retrieve';
     axios({
       method: 'GET',
       url: endpoint
@@ -130,7 +130,7 @@ class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    //this.retrieveImageDocument(); //uncomment to query S3 (warning: bandwidth)
+    this.retrieveImageDocument(); //uncomment to query S3 (warning: bandwidth)
   }
 }
 
