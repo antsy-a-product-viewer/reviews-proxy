@@ -2,4 +2,5 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from './components/Container.jsx';
 
-ReactDOM.render(<Container />, document.getElementById('reviews'));
+// ReactDOM.render(<Container />, document.getElementById('reviews'));
+window.Container = Container;
