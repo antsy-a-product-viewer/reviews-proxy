@@ -3,38 +3,48 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
-    <title>Antsy</title>
+    <title>Catsy</title>
   </head>
   <body>
     <div>
       <div id="header">
-        <h1 class="header-piece">Antsy</h1>
-        <img class="header-piece" src="https://s3-us-west-1.amazonaws.com/antsyscreenshots/header.png">
+        <h1 class="header-piece">Catsy</h1>
+        <img class="header-piece" src="https://s3-us-west-1.amazonaws.com/catsyimgs/header.png">
       </div>
       <img src="https://s3-us-west-1.amazonaws.com/antsyscreenshots/navbar.png">
     </div>
-    <div class="app-container">
-      <div>
-        <div id="carousel"></div>
-        <img id="description" src="https://s3-us-west-1.amazonaws.com/antsyscreenshots/description2.png">
-        <div id="reviews"></div>
-        <img id="payment" src="https://s3-us-west-1.amazonaws.com/antsyscreenshots/payment+options2.png">
+    <div id="container">
+      <div class="app-container">
+        <div>
+          <div id="carousel"></div>
+          <img id="description" src="https://s3-us-west-1.amazonaws.com/catsyimgs/description.png">
+          <div id="reviews">
+          </div>
+          <img id="payment" src="https://s3-us-west-1.amazonaws.com/catsyimgs/paymentOptions.png">
+          <img class="about" src="https://s3-us-west-1.amazonaws.com/catsyimgs/aboutOwner.png">
+        </div>
+        <div>
+          <div id="store"></div>
+          <img id="summary" src="https://s3-us-west-1.amazonaws.com/catsyimgs/storeItems1.png">
+          <img src="https://s3-us-west-1.amazonaws.com/catsyimgs/storeItems2.png">
+        </div>
       </div>
       <div>
-        <div id="store"></div>
-        <img id="summary" src="https://s3-us-west-1.amazonaws.com/antsyscreenshots/shopitems.png">
+        <img class="related-items" src="https://s3-us-west-1.amazonaws.com/catsyimgs/relatedItems1.png">
+        <img class="related-items" src="https://s3-us-west-1.amazonaws.com/catsyimgs/relatedItems2.png">
       </div>
-    </div>
-    <div>
-      <img id="related-items" src="https://s3-us-west-1.amazonaws.com/antsyscreenshots/related-items.png">
-    </div>
-    <div>
-      <img id="footer" src="https://s3-us-west-1.amazonaws.com/antsyscreenshots/footer.png">
+      <div>
+        <img class="footer" src="https://s3-us-west-1.amazonaws.com/catsyimgs/footer1.png">
+        <div id="footer">
+          <h1 class="footer-piece">Catsy</h1>
+          <img class="footer-piece" src="https://s3-us-west-1.amazonaws.com/catsyimgs/footer2.png">
+        </div>
+      </div>
     </div>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="http://localhost:3010/product/1/bundle.js"></script>
-    <script src="http://localhost:3000/product/1/bundle.js"></script>
-    <script src="http://localhost:3020/product/1/bundle.js"></script>
+    <script src="http://ec2-184-73-119-71.compute-1.amazonaws.com/product/1/bundle.js"></script>
+    <script src="http://ec2-34-217-208-55.us-west-2.compute.amazonaws.com/product/1/bundle.js"></script>
+    <script src="http://antsyreviews-env-7.umbh3jiqit.us-west-1.elasticbeanstalk.com/product/1/bundle.js"></script>
   </body>
 </html>

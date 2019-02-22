@@ -10,27 +10,33 @@
 
 .app-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 1040px;
+  margin-left: 200px;
 }
 
 #description {
   margin-top: 75px;
 }
 
-#summary {
-  width: 400px;
-}
-
 #payment {
   width: 600px;
 }
 
-#related-items {
-  width: 1000px;
-  margin-left: 200px;
+.related-items {
+  margin-left: 220px;
+}
+
+.footer {
+  margin-left: 220px;
 }
 
 #footer {
-  width: 1000px;
-  margin-left: 200px;
+  display: flex;
+  margin-left: 220px;
+}
+
+.footer-piece {
+  align-self: center;
+  color: orange;
 }
